@@ -1,0 +1,44 @@
+{
+  "name": "cypress-api-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "cy-spok": "^1.6.1",
+    "cypress": "^12.12.0",
+    "cypress-each": "^1.13.3",
+    "cypress-localstorage-commands": "^2.2.3",
+    "cypress-mochawesome-reporter": "^3.5.0",
+    "eslint": "^8.41.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-cypress": "^2.13.3",
+    "eslint-plugin-no-only-tests": "^3.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,json}": [
+      "eslint . --ext .ts --fix",
+      "prettier --write ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.1",
+    "cypress-plugin-steps": "^1.1.1"
+  }
+}

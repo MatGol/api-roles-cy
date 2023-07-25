@@ -1,0 +1,9 @@
+.vscode
+.DS_Store
+node_modules
+cypress/videos
+cypress/screenshots
+cypress/results
+mochawesome-report
+cypress/reports
+cypress/downloads
